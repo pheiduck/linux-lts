@@ -17,6 +17,7 @@ pkgname=(
 	"${pkgbase}-nvidiabl"
 	"${pkgbase}-r8168"
 	"${pkgbase}-rt3562sta"
+	"${pkgbase}-rtl8723bu"
 	"${pkgbase}-tp_smapi"
 	"${pkgbase}-vhba-module"
 	"${pkgbase}-virtualbox-guest-modules"
@@ -154,6 +155,15 @@ package_linux-lts-rt3562sta(){
 	for kernel in "${eol[@]}"; do
 		replaces+=("linux${kernel}-rt3562sta")
 		conflicts+=("linux${kernel}-rt3562sta")
+	done
+}
+
+package_linux-lts-rtl8723bu(){
+	pkgdesc="Realtek 8723bu network card kernel module (metapackage)"
+	depends=("linux${_kernelver}-rtl8723bu")
+	for kernel in "${eol[@]}"; do
+		replaces+=("linux${kernel}-rtl8723bu")
+		conflicts+=("linux${kernel}-rtl8723bu")
 	done
 }
 

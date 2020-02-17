@@ -1,15 +1,14 @@
 # Maintainer: Jonathon Fernyhough <jonathon at_manjaro dot.org>
 
 pkgbase=linux-lts
-pkgver=4.19
-pkgrel=3
+pkgver=54
+pkgrel=1
 pkgname=(
 	"${pkgbase}"
 	"${pkgbase}-headers"
 	"${pkgbase}-acpi_call"
 	"${pkgbase}-bbswitch"
 	"${pkgbase}-broadcom-wl"
-	"${pkgbase}-catalyst"
 	"${pkgbase}-ndiswrapper"
 	"${pkgbase}-nvidia-340xx"
 	"${pkgbase}-nvidia-390xx"
@@ -19,7 +18,6 @@ pkgname=(
 	"${pkgbase}-nvidia-440xx"
 	"${pkgbase}-nvidiabl"
 	"${pkgbase}-r8168"
-	"${pkgbase}-rt3562sta"
 	"${pkgbase}-rtl8723bu"
 	"${pkgbase}-tp_smapi"
 	"${pkgbase}-vhba-module"

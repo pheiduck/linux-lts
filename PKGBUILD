@@ -1,15 +1,15 @@
 # Maintainer: Jonathon Fernyhough <jonathon at_manjaro dot.org>
 
 pkgbase=linux-lts
-pkgver=4.19
-pkgrel=3
+pkgver=5.4
+pkgrel=1
 pkgname=(
 	"${pkgbase}"
 	"${pkgbase}-headers"
 	"${pkgbase}-acpi_call"
 	"${pkgbase}-bbswitch"
 	"${pkgbase}-broadcom-wl"
-	"${pkgbase}-catalyst"
+	#"${pkgbase}-catalyst"
 	"${pkgbase}-ndiswrapper"
 	"${pkgbase}-nvidia-340xx"
 	"${pkgbase}-nvidia-390xx"

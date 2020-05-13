@@ -2,7 +2,7 @@
 
 pkgbase=linux-lts
 pkgver=5.4
-pkgrel=1
+pkgrel=2
 epoch=1
 pkgname=(
 	"${pkgbase}"

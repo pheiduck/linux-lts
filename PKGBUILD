@@ -1,8 +1,9 @@
 # Maintainer: Jonathon Fernyhough <jonathon at_manjaro dot.org>
 
 pkgbase=linux-lts
-pkgver=54
+pkgver=5.4
 pkgrel=1
+epoch=1
 pkgname=(
 	"${pkgbase}"
 	"${pkgbase}-headers"

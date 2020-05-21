@@ -2,14 +2,14 @@
 
 pkgbase=linux-lts
 pkgver=5.4
-pkgrel=1
+pkgrel=3
+epoch=1
 pkgname=(
 	"${pkgbase}"
 	"${pkgbase}-headers"
 	"${pkgbase}-acpi_call"
 	"${pkgbase}-bbswitch"
 	"${pkgbase}-broadcom-wl"
-	#"${pkgbase}-catalyst"
 	"${pkgbase}-ndiswrapper"
 	"${pkgbase}-nvidia-340xx"
 	"${pkgbase}-nvidia-390xx"
@@ -19,7 +19,6 @@ pkgname=(
 	"${pkgbase}-nvidia-440xx"
 	"${pkgbase}-nvidiabl"
 	"${pkgbase}-r8168"
-	"${pkgbase}-rt3562sta"
 	"${pkgbase}-rtl8723bu"
 	"${pkgbase}-tp_smapi"
 	"${pkgbase}-vhba-module"
@@ -36,6 +35,7 @@ _kernelver="${pkgver/\./}"
 
 # EOL kernels between last and latest LTS
 eol=(
+	316
 	415
 	416
 	417

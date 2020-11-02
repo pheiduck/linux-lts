@@ -4,7 +4,7 @@
 
 pkgbase=linux-lts
 pkgver=5.4
-pkgrel=3
+pkgrel=4
 epoch=1
 pkgname=(
 	"${pkgbase}"
@@ -19,6 +19,8 @@ pkgname=(
 	"${pkgbase}-nvidia-430xx"
 	"${pkgbase}-nvidia-435xx"
 	"${pkgbase}-nvidia-440xx"
+	"${pkgbase}-nvidia-450xx"
+	"${pkgbase}-nvidia-455xx"
 	"${pkgbase}-nvidiabl"
 	"${pkgbase}-r8168"
 	"${pkgbase}-rtl8723bu"
@@ -165,6 +167,24 @@ package_linux-lts-nvidia-440xx(){
 	done
 }
 
+package_linux-lts-nvidia-450xx(){
+	pkgdesc="NVIDIA drivers for Linux (metapackage)"
+	depends=("linux${_kernelver}-nvidia-450xx")
+	for kernel in "${eol[@]}"; do
+		replaces+=("linux${kernel}-nvidia-450xx")
+		conflicts+=("linux${kernel}-nvidia-450xx")
+	done
+}
+
+package_linux-lts-nvidia-455xx(){
+	pkgdesc="NVIDIA drivers for Linux (metapackage)"
+	depends=("linux${_kernelver}-nvidia-455xx")
+	for kernel in "${eol[@]}"; do
+		replaces+=("linux${kernel}-nvidia-455xx")
+		conflicts+=("linux${kernel}-nvidia-455xx")
+	done
+}
+
 package_linux-lts-nvidiabl(){
 	pkgdesc="Driver to adjust display backlight on modern mobile NVidia graphics adapters (metapackage)"
 	depends=("linux${_kernelver}-nvidiabl")
@@ -245,3 +265,4 @@ package_linux-lts-zfs(){
 		conflicts+=("linux${kernel}-zfs")
 	done
 }
+

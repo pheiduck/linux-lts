@@ -33,13 +33,7 @@ license=('GPL')
 _kernelver="${pkgver/\./}"
 
 # EOL kernels between last and latest LTS
-eol=(
-	316
-	415
-	416
-	417
-	418
-)
+eol=()
 
 package_linux-lts() {
 	pkgdesc="The latest LTS kernel and modules (metapackage)"

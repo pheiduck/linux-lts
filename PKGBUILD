@@ -5,7 +5,7 @@
 
 pkgbase=linux-lts
 pkgver=6.6
-pkgrel=1
+pkgrel=2
 epoch=1
 pkgname=(
 	"${pkgbase}"
@@ -16,12 +16,10 @@ pkgname=(
 	"${pkgbase}-ndiswrapper"
 	"${pkgbase}-nvidia-390xx"
 	"${pkgbase}-nvidia-470xx"
-	"${pkgbase}-nvidiabl"
 	"${pkgbase}-r8168"
 	"${pkgbase}-rtl8723bu"
 	"${pkgbase}-tp_smapi"
 	"${pkgbase}-vhba-module"
-	"${pkgbase}-virtualbox-guest-modules"
 	"${pkgbase}-virtualbox-host-modules"
 	"${pkgbase}-zfs"
 )

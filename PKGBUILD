@@ -5,7 +5,7 @@
 
 pkgbase=linux-lts
 pkgver=6.6
-pkgrel=2
+pkgrel=3
 epoch=1
 pkgname=(
 	"${pkgbase}"
@@ -13,7 +13,7 @@ pkgname=(
 	"${pkgbase}-acpi_call"
 	"${pkgbase}-bbswitch"
 	"${pkgbase}-broadcom-wl"
-	"${pkgbase}-ndiswrapper"
+ 	"${pkgbase}-nvidia"
 	"${pkgbase}-nvidia-390xx"
 	"${pkgbase}-nvidia-470xx"
 	"${pkgbase}-r8168"
@@ -80,21 +80,13 @@ package_linux-lts-broadcom-wl(){
 	done
 }
 
-package_linux-lts-catalyst(){
-	pkgdesc="AMD/ATI Catalyst drivers for linux. fglrx kernel module only (metapackage)"
-	depends=("linux${_kernelver}-catalyst")
-	for kernel in "${eol[@]}"; do
-		replaces+=("linux${kernel}-catalyst")
-		conflicts+=("linux${kernel}-catalyst")
-	done
-}
 
-package_linux-lts-ndiswrapper(){
-	pkgdesc="Module for NDIS (Windows Network Drivers) drivers supplied by vendors (metapackage)"
-	depends=("linux${_kernelver}-ndiswrapper")
+package_linux-lts-nvidia(){
+	pkgdesc="NVIDIA drivers for Linux (metapackage)"
+	depends=("linux${_kernelver}-nvidia")
 	for kernel in "${eol[@]}"; do
-		replaces+=("linux${kernel}-ndiswrapper")
-		conflicts+=("linux${kernel}-ndiswrapper")
+		replaces+=("linux${kernel}-nvidia")
+		conflicts+=("linux${kernel}-nvidia")
 	done
 }
 
@@ -116,30 +108,12 @@ package_linux-lts-nvidia-470xx(){
 	done
 }
 
-package_linux-lts-nvidiabl(){
-	pkgdesc="Driver to adjust display backlight on modern mobile NVidia graphics adapters (metapackage)"
-	depends=("linux${_kernelver}-nvidiabl")
-	for kernel in "${eol[@]}"; do
-		replaces+=("linux${kernel}-nvidiabl")
-		conflicts+=("linux${kernel}-nvidiabl")
-	done
-}
-
 package_linux-lts-r8168(){
 	pkgdesc="A kernel module for Realtek 8168 network cards (metapackage)"
 	depends=("linux${_kernelver}-r8168")
 	for kernel in "${eol[@]}"; do
 		replaces+=("linux${kernel}-r8168")
 		conflicts+=("linux${kernel}-r8168")
-	done
-}
-
-package_linux-lts-rt3562sta(){
-	pkgdesc="Ralink RT3562 PCI WLAN adaptors kernel module (metapackage)"
-	depends=("linux${_kernelver}-rt3562sta")
-	for kernel in "${eol[@]}"; do
-		replaces+=("linux${kernel}-rt3562sta")
-		conflicts+=("linux${kernel}-rt3562sta")
 	done
 }
 
@@ -167,15 +141,6 @@ package_linux-lts-vhba-module(){
 	for kernel in "${eol[@]}"; do
 		replaces+=("linux${kernel}-vhba-module")
 		conflicts+=("linux${kernel}-vhba-module")
-	done
-}
-
-package_linux-lts-virtualbox-guest-modules(){
-	pkgdesc="Guest kernel modules for VirtualBox (metapackage)"
-	depends=("linux${_kernelver}-virtualbox-guest-modules")
-	for kernel in "${eol[@]}"; do
-		replaces+=("linux${kernel}-virtualbox-guest-modules")
-		conflicts+=("linux${kernel}-virtualbox-guest-modules")
 	done
 }
 

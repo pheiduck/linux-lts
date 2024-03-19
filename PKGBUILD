@@ -6,7 +6,6 @@
 pkgbase=linux-lts
 pkgver=6.6
 pkgrel=3
-epoch=1
 pkgname=(
 	"${pkgbase}"
 	"${pkgbase}-headers"
